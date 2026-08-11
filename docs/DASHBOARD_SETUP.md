@@ -40,4 +40,15 @@ Validator kiểm tra cấu trúc contract; nó không thể chứng minh biểu 
 5. Mở trace chậm và tìm log có cùng correlation ID.
 6. Tắt incident bằng `python scripts/inject_incident.py --scenario rag_slow --disable`.
 
+## Dashboard runtime có sẵn trong repo
+
+Render dashboard trực tiếp từ log và threshold trong contract:
+
+```bash
+python scripts/render_dashboard.py
+python -m http.server 8765
+```
+
+Sau đó mở `http://127.0.0.1:8765/submission/evidence/dashboard.html`. Trang tự refresh mỗi 30 giây, lọc cửa sổ 60 phút và hiển thị đủ unit/SLO threshold của cả sáu panel. Chạy lại `render_dashboard.py` sau một load test hoặc incident để cập nhật số liệu trước khi chụp ảnh.
+
 Ảnh dashboard phải nhìn được tên panel, time range, đơn vị và threshold. Báo cáo phải dẫn lại trace ID hoặc log line dùng để giải thích thay đổi.
