@@ -1,0 +1,13 @@
+PII redaction evidence
+Generated from data/logs.jsonl on 2026-08-11.
+
+Email:
+{"service":"api","payload":{"message_preview":"What is your refund policy? My email is [REDACTED_EMAIL]"},"event":"request_received","feature":"qa","session_id":"s01","user_id_hash":"2055254ee30a","model":"claude-sonnet-4-5","correlation_id":"req-263a7e65","env":"dev","level":"info","ts":"2026-08-11T03:25:53.749942Z"}
+
+Vietnamese phone number:
+{"service":"api","payload":{"message_preview":"Here is my phone [REDACTED_PHONE_VN], what should be logged?"},"event":"request_received","feature":"qa","session_id":"s05","user_id_hash":"64f6ec689229","model":"claude-sonnet-4-5","correlation_id":"req-d57b8f19","env":"dev","level":"info","ts":"2026-08-11T03:25:54.445538Z"}
+
+Credit card number:
+{"service":"api","payload":{"message_preview":"What is the policy for PII and credit card [REDACTED_CREDIT_CARD]?"},"event":"request_received","feature":"qa","session_id":"s09","user_id_hash":"4d14d5d4f719","model":"claude-sonnet-4-5","correlation_id":"req-b3234df9","env":"dev","level":"info","ts":"2026-08-11T03:25:55.127284Z"}
+
+Validator result: Potential PII leaks detected: 0.

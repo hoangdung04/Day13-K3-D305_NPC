@@ -1,0 +1,19 @@
+Incident correlation evidence for challenge day13-k3-observability-v1
+
+Slowest request:
+{"service":"api","payload":{"message_preview":"Explain the refund window and required evidence."},"event":"request_received","model":"claude-sonnet-4-5","env":"dev","feature":"refund","session_id":"k3-challenge-s03","user_id_hash":"b7fde6ae11b0","correlation_id":"req-8dd7cdf6","level":"info","ts":"2026-08-11T03:39:53.803800Z"}
+{"service":"api","latency_ms":2653,"tokens_in":34,"tokens_out":179,"cost_usd":0.002787,"quality_score":0.8,"payload":{"answer_preview":"Starter answer. Teams should improve this output logic and add better quality ch..."},"event":"response_sent","model":"claude-sonnet-4-5","env":"dev","feature":"refund","session_id":"k3-challenge-s03","user_id_hash":"b7fde6ae11b0","correlation_id":"req-8dd7cdf6","level":"info","ts":"2026-08-11T03:39:56.462168Z"}
+
+Code-level root cause:
+- app/mock_rag.py checks STATE["rag_slow"] inside retrieve().
+- When enabled, the retrieval stage performs a blocking time.sleep(2.5).
+- The observed latency increase (approximately 2502 ms at P95) matches this injected delay.
+
+Fix action:
+- Disable rag_slow to restore service immediately.
+- Add a retrieval timeout and fallback response/cache so a slow vector store does not block the full request.
+
+Preventive measures:
+- Alert when refund latency P95 exceeds 2000 ms for a sustained window.
+- Trace the retrieval operation as its own span and attach the request correlation ID.
+- Run canary/load tests before releasing retrieval changes.

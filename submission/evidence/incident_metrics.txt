@@ -1,0 +1,30 @@
+Challenge: day13-k3-observability-v1
+Scenario: rag_slow
+Affected feature: refund
+Configured latency threshold: 2000 ms
+Investigation mode: local API with cloud tracing disabled
+
+Baseline, 5 official challenge queries:
+- traffic: 5
+- latency P50: 151 ms
+- latency P95: 151 ms
+- latency P99: 151 ms
+- error breakdown: empty
+- quality average: 0.86
+
+After enabling rag_slow and running the same 5 queries:
+- traffic: 10 total
+- latency P50: 2652 ms
+- latency P95: 2653 ms
+- latency P99: 2653 ms
+- error breakdown: empty
+- quality average: 0.86
+
+Incident request latencies:
+- req-6a7df8a1: 2652 ms
+- req-4afd99de: 2652 ms
+- req-8dd7cdf6: 2653 ms
+- req-3b766592: 2652 ms
+- req-89272875: 2652 ms
+
+Conclusion: P95 increased by 2502 ms and exceeded the 2000 ms threshold without a corresponding error-rate or quality change.
