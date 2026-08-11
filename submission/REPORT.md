@@ -3,7 +3,7 @@
 ## 1. Thông tin nhóm
 
 - Tên nhóm: D305
-- Repository URL: https://github.com/hoangdung04/Day13-K3-D305_HoangManhDung
+- Repository URL: https://github.com/hoangdung04/Day13-K3-D305_NPC
 - Commit SHA nộp: lấy từ HEAD sau commit/push cuối bằng `git rev-parse HEAD`; commit CP0/CP1 đã push: `689c888`.
 - Thành viên và vai trò: Hoàng Mạnh Dũng — Logging & PII, Incident/Report; Trần Việt Trường (`2A202601467`) — Tracing & Prompt Version, Dashboard/SLO/Alert.
 
