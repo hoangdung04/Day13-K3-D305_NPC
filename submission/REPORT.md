@@ -7,6 +7,8 @@
 - Commit SHA nộp: lấy từ HEAD sau commit/push cuối bằng `git rev-parse HEAD`; commit CP0/CP1 đã push: `689c888`.
 - Thành viên và vai trò: Hoàng Mạnh Dũng (`2A202601213`) — Logging & PII, Incident/Report; Trần Việt Trường (`2A202601467`) — Tracing & Prompt Version, Dashboard/SLO/Alert.
 
+> **Ghi chú cho mentor:** Báo cáo và bảng evidence cá nhân của **Trần Việt Trường — 2A202601467** nằm tại [`TRAN_VIET_TRUONG_2A202601467.md`](TRAN_VIET_TRUONG_2A202601467.md). Phần triển khai gốc nằm ở commit `564df28`; commit nộp cuối bổ sung ghi chú này để việc chấm đóng góp từng thành viên rõ ràng.
+
 ## 2. Kết quả kỹ thuật
 
 - Điểm `validate_logs.py`: 100/100 (`evidence/validate_logs.txt`)
@@ -54,3 +56,5 @@ Với mỗi thành viên, ghi rõ nhiệm vụ và link commit/PR tương ứng.
 |---|---|---|---|
 | Hoàng Mạnh Dũng (`2A202601213`) | Correlation ID, structured JSON logging, context metadata, recursive PII redaction; điều tra challenge và tổng hợp report | `689c888`, `4855eb2` | Dùng correlation ID để nối metrics với logs; kiểm chứng root cause bằng mức tăng P95 và log cụ thể; redact PII trước khi ghi log |
 | Trần Việt Trường (`2A202601467`) | Correlation ID trong trace metadata; prompt v1/v2 và rollback; dashboard runtime 6 panel; SLO, alert và runbook | `564df28` và merge commit trên nhánh nộp | Nối trace với log bằng correlation ID; chuyển dashboard contract thành dashboard runtime; thiết kế alert theo triệu chứng và SLO |
+
+Chi tiết phần việc, trace ID và evidence của Trần Việt Trường: [`TRAN_VIET_TRUONG_2A202601467.md`](TRAN_VIET_TRUONG_2A202601467.md).

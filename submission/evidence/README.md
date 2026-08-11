@@ -5,6 +5,8 @@
 - Hoàng Mạnh Dũng (`2A202601213`) — Logging & PII, Incident/Report.
 - Trần Việt Trường (`2A202601467`) — Tracing & Prompt Version, Dashboard/SLO/Alert.
 
+Bảng đối chiếu cá nhân để mentor chấm phần của Trường: [`../TRAN_VIET_TRUONG_2A202601467.md`](../TRAN_VIET_TRUONG_2A202601467.md).
+
 ## Logging và PII
 
 - `validate_logs.txt`: validator đạt 100/100.
