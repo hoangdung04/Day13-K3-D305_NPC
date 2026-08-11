@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="30"><title>Day 13 AI Observability</title>
+<style>
+:root{--bg:#08111f;--card:#101d31;--line:#24344c;--text:#eef5ff;--muted:#92a5bf;--cyan:#52d7e9;--green:#45dfa0;--red:#ff6b7a}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 15% -10%,#153660 0,transparent 35%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui;padding:34px}
+.wrap{max-width:1400px;margin:auto} header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:26px} h1{font-size:32px;margin:6px 0} .kicker,.meta,.source{color:var(--muted)} .kicker{letter-spacing:.16em;text-transform:uppercase;font-size:12px} .meta{text-align:right;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px} .panel{position:relative;background:linear-gradient(145deg,rgba(20,37,61,.96),rgba(12,24,42,.96));border:1px solid var(--line);border-radius:16px;padding:22px;min-height:245px;overflow:hidden}
+.panel:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--green)} .panel.breach:after{background:var(--red)} .panel-head{display:flex;justify-content:space-between} .eyebrow{color:var(--cyan);font-weight:700;font-size:12px;letter-spacing:.15em} .status{font-size:11px;text-transform:uppercase;border-radius:99px;padding:5px 9px;background:#173f39;color:var(--green)} .breach .status{background:#482331;color:#ff9baa}
+h2{font-size:17px;margin:18px 0 10px} .metric{font-size:38px;font-weight:760;letter-spacing:-.04em} .metric small{font-size:14px;color:var(--muted);letter-spacing:0} .detail{color:#c3d3e8;margin:8px 0 22px} .threshold{font-size:13px;border-top:1px solid var(--line);padding-top:14px;color:#cce8ee} .source{font-size:11px;margin-top:9px}
+footer{margin-top:18px;color:var(--muted);font-size:12px} @media(max-width:900px){.grid{grid-template-columns:1fr} header{align-items:flex-start;gap:12px;flex-direction:column}.meta{text-align:left}}
+</style></head><body><main class="wrap"><header><div><div class="kicker">AI Operations · Runtime Dashboard</div><h1>Day 13 AI Observability</h1><div class="kicker">Owner · Tran Viet Truong · 2A202601467</div></div><div class="meta">Time range: Last 60 minutes<br>Auto refresh: 30 seconds<br>Generated: 2026-08-11 02:48:18 UTC</div></header><div class="grid">
+        <section class="panel healthy" data-panel-id="latency">
+          <div class="panel-head"><span class="eyebrow">LATENCY</span><span class="status">healthy</span></div>
+          <h2>Latency percentiles</h2>
+          <div class="metric">155.00 <small>ms</small></div>
+          <div class="detail">P50 153 · P99 155</div>
+          <div class="threshold">SLO threshold · p95 ≤ 3000 ms</div>
+          <div class="source">data/logs.jsonl · p50, p95, p99</div>
+        </section>
+        <section class="panel healthy" data-panel-id="traffic">
+          <div class="panel-head"><span class="eyebrow">TRAFFIC</span><span class="status">healthy</span></div>
+          <h2>Request traffic</h2>
+          <div class="metric">1.00 <small>req/min</small></div>
+          <div class="detail">60 requests / 60m</div>
+          <div class="threshold">SLO threshold · rate_per_minute ≥ 1 requests_per_minute</div>
+          <div class="source">data/logs.jsonl · count, rate_per_minute</div>
+        </section>
+        <section class="panel healthy" data-panel-id="errors">
+          <div class="panel-head"><span class="eyebrow">ERRORS</span><span class="status">healthy</span></div>
+          <h2>Error rate and breakdown</h2>
+          <div class="metric">0.00 <small>%</small></div>
+          <div class="detail">0 failed / 60 received</div>
+          <div class="threshold">SLO threshold · error_rate_pct ≤ 2 percent</div>
+          <div class="source">data/logs.jsonl · error_rate_pct, count_by_value</div>
+        </section>
+        <section class="panel healthy" data-panel-id="cost">
+          <div class="panel-head"><span class="eyebrow">COST</span><span class="status">healthy</span></div>
+          <h2>Cost over time</h2>
+          <div class="metric">0.1169 <small>USD</small></div>
+          <div class="detail">60 billable responses</div>
+          <div class="threshold">SLO threshold · total ≤ 2.5 usd</div>
+          <div class="source">data/logs.jsonl · sum_by_minute, total</div>
+        </section>
+        <section class="panel healthy" data-panel-id="tokens">
+          <div class="panel-head"><span class="eyebrow">TOKENS</span><span class="status">healthy</span></div>
+          <h2>Input and output tokens</h2>
+          <div class="metric">9568.00 <small>tokens</small></div>
+          <div class="detail">in 2220 · out 7348</div>
+          <div class="threshold">SLO threshold · sum_by_field ≤ 50000 tokens</div>
+          <div class="source">data/logs.jsonl · sum_by_field</div>
+        </section>
+        <section class="panel healthy" data-panel-id="quality">
+          <div class="panel-head"><span class="eyebrow">QUALITY</span><span class="status">healthy</span></div>
+          <h2>Quality proxy</h2>
+          <div class="metric">0.80 <small>score</small></div>
+          <div class="detail">mean of 60 responses</div>
+          <div class="threshold">SLO threshold · mean ≥ 0.75 score_0_to_1</div>
+          <div class="source">data/logs.jsonl · mean</div>
+        </section></div><footer>121 log events in active window · thresholds loaded from config/dashboard.yaml</footer></main></body></html>

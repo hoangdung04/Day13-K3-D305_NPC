@@ -30,6 +30,17 @@ Nếu Langfuse không khả dụng, app dùng template local và trace metadata 
 5. Chuyển label `production` sang version 2, chạy lại một request.
 6. Rollback `production` về version 1 và lưu ảnh evidence.
 
+Repo có script hỗ trợ tạo đúng contract và đổi label:
+
+```bash
+python scripts/manage_prompts.py plan
+python scripts/manage_prompts.py create
+python scripts/manage_prompts.py promote --version 2
+python scripts/manage_prompts.py rollback --version 1
+```
+
+`plan` không cần key và không thay đổi Langfuse. Ba lệnh còn lại đọc key từ `.env`, dừng an toàn nếu thiếu key, và ghi commit message/tag có mã học viên để dễ audit. Sau mỗi lần đổi label, khởi động lại app hoặc chờ prompt cache 60 giây trước khi tạo trace evidence.
+
 Không chấm prompt nào “hay hơn”. Điểm nằm ở khả năng truy xuất version, đổi label và rollback có bằng chứng.
 
 ## Evidence

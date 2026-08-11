@@ -5,7 +5,12 @@ from dataclasses import dataclass
 from typing import Any
 
 
-DEFAULT_PROMPT_TEMPLATE = "Feature={{feature}}\nDocs={{docs}}\nQuestion={{message}}"
+PROMPT_V1_TEMPLATE = "Feature={{feature}}\nDocs={{docs}}\nQuestion={{message}}"
+PROMPT_V2_TEMPLATE = (
+    "Feature={{feature}}\nDocs={{docs}}\nQuestion={{message}}\n"
+    "Answer concisely and finish with one observable next step."
+)
+DEFAULT_PROMPT_TEMPLATE = PROMPT_V1_TEMPLATE
 
 
 @dataclass(frozen=True)

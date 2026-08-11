@@ -4,7 +4,7 @@ slis:
   latency_p95_ms:
     objective: 3000
     target: 99.5
-    note: User-facing latency target aligned with the dashboard P95 threshold.
+    note: 99.5% cửa sổ 28 ngày có P95 latency không quá 3000 ms.
   error_rate_pct:
     objective: 2
     target: 99.0
@@ -14,3 +14,4 @@ slis:
   quality_score_avg:
     objective: 0.75
     target: 95.0
+    note: 95% cửa sổ đo có quality proxy trung bình từ 0.75 trở lên.

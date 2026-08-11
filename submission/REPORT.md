@@ -5,7 +5,7 @@
 - Tên nhóm: D305
 - Repository URL: https://github.com/hoangdung04/Day13-K3-D305_HoangManhDung
 - Commit SHA nộp: lấy từ HEAD sau commit/push cuối bằng `git rev-parse HEAD`; commit CP0/CP1 đã push: `689c888`.
-- Thành viên và vai trò: Hoàng Mạnh Dũng — Logging & PII, Incident/Report; Trần Việt Trường — Tracing & Prompt Version, Dashboard/SLO/Alert.
+- Thành viên và vai trò: Hoàng Mạnh Dũng — Logging & PII, Incident/Report; Trần Việt Trường (`2A202601467`) — Tracing & Prompt Version, Dashboard/SLO/Alert.
 
 ## 2. Kết quả kỹ thuật
 
@@ -52,5 +52,5 @@ Với mỗi thành viên, ghi rõ nhiệm vụ và link commit/PR tương ứng.
 
 | Thành viên | Phần việc | Commit/PR | Điều đã học |
 |---|---|---|---|
-| Hoàng Mạnh Dũng | Correlation ID, structured JSON logging, context metadata, recursive PII redaction; điều tra challenge và tổng hợp report | `689c888` cho CP0/CP1; SHA challenge/report là HEAD của nhánh nộp | Dùng correlation ID để nối metrics với logs; kiểm chứng root cause bằng mức tăng P95 và log cụ thể; redact PII trước khi ghi log |
-| Trần Việt Trường | Correlation ID trong trace metadata; prompt v1/v2 và rollback; dashboard runtime 6 panel; SLO, alert và runbook | Phần CP2 nằm trong commit HEAD của nhánh nộp | Nối trace với log bằng correlation ID; chuyển dashboard contract thành dashboard runtime; thiết kế alert theo triệu chứng và SLO |
+| Hoàng Mạnh Dũng | Correlation ID, structured JSON logging, context metadata, recursive PII redaction; điều tra challenge và tổng hợp report | `689c888`, `4855eb2` | Dùng correlation ID để nối metrics với logs; kiểm chứng root cause bằng mức tăng P95 và log cụ thể; redact PII trước khi ghi log |
+| Trần Việt Trường (`2A202601467`) | Correlation ID trong trace metadata; prompt v1/v2 và rollback; dashboard runtime 6 panel; SLO, alert và runbook | `564df28` và merge commit trên nhánh nộp | Nối trace với log bằng correlation ID; chuyển dashboard contract thành dashboard runtime; thiết kế alert theo triệu chứng và SLO |

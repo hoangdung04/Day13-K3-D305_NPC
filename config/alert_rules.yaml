@@ -4,19 +4,21 @@ alerts:
     condition: latency_p95_ms > 3000
     duration: 5m
     type: symptom-based
-    owner: TranVietTruong
+    owner: "Trần Việt Trường (2A202601467)"
     runbook: docs/alerts.md#alert-1
   - name: HighErrorRate
     severity: critical
     condition: error_rate_pct > 2
     duration: 5m
+    minimum_request_count: 20
     type: symptom-based
-    owner: TranVietTruong
+    owner: "Trần Việt Trường (2A202601467)"
     runbook: docs/alerts.md#alert-2
   - name: LowQualityScore
     severity: warning
     condition: quality_score_avg < 0.75
-    duration: 10m
+    duration: 15m
+    minimum_response_count: 20
     type: symptom-based
-    owner: TranVietTruong
+    owner: "Trần Việt Trường (2A202601467)"
     runbook: docs/alerts.md#alert-3
