@@ -2,7 +2,7 @@
 
 ## Thành viên
 
-- Hoàng Mạnh Dũng — Logging & PII, Incident/Report.
+- Hoàng Mạnh Dũng (`2A202601213`) — Logging & PII, Incident/Report.
 - Trần Việt Trường (`2A202601467`) — Tracing & Prompt Version, Dashboard/SLO/Alert.
 
 ## Logging và PII
