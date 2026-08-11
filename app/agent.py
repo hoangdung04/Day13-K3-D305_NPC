@@ -3,6 +3,8 @@ from __future__ import annotations
 import time
 from dataclasses import dataclass
 
+from structlog.contextvars import get_contextvars
+
 from . import metrics
 from .mock_llm import FakeLLM
 from .mock_rag import retrieve
@@ -29,6 +31,7 @@ class LabAgent:
     @observe(as_type="generation", capture_input=False, capture_output=False)
     def run(self, user_id: str, feature: str, session_id: str, message: str) -> AgentResult:
         started = time.perf_counter()
+        request_context = get_contextvars()
         docs = retrieve(message)
         langfuse_client = get_langfuse_client()
         prompt = resolve_prompt(
@@ -52,6 +55,10 @@ class LabAgent:
                 "prompt_label": prompt.label,
                 "prompt_version": prompt.version,
                 "prompt_source": prompt.source,
+                "correlation_id": request_context.get("correlation_id"),
+                "feature": feature,
+                "model": self.model,
+                "env": request_context.get("env", "dev"),
             },
         )
         langfuse_client.update_current_generation(
@@ -64,6 +71,9 @@ class LabAgent:
                 "prompt_version": prompt.version,
                 "prompt_source": prompt.source,
                 "prompt_fetch_error": prompt.fetch_error,
+                "correlation_id": request_context.get("correlation_id"),
+                "feature": feature,
+                "env": request_context.get("env", "dev"),
             },
             usage_details={
                 "prompt_tokens": response.usage.input_tokens,

@@ -1,0 +1,9 @@
+HỢP LỆ: 6/6 panel có trong dashboard contract.
+
+Runtime verification:
+- URL: http://127.0.0.1:8501
+- Source: data/logs.jsonl
+- Time range: 60 minutes
+- Refresh: 30 seconds
+- Panels: latency, traffic, errors, cost, tokens, quality
+- Screenshot: dashboard-runtime.png

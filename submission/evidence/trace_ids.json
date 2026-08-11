@@ -1,0 +1,102 @@
+[
+  {
+    "label": "baseline",
+    "feature": "refund",
+    "session_id": "k3-challenge-s01",
+    "correlation_id": "req-54f30bba",
+    "latency_ms": 1140,
+    "trace_id": "c95a53a2271d57ab0535d20f328a0517",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/c95a53a2271d57ab0535d20f328a0517",
+    "prompt_name": "day13-chat"
+  },
+  {
+    "label": "baseline",
+    "feature": "refund",
+    "session_id": "k3-challenge-s02",
+    "correlation_id": "req-039abb95",
+    "latency_ms": 151,
+    "trace_id": "d10cdfba2c17a206d63049b73b18f0d0",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/d10cdfba2c17a206d63049b73b18f0d0",
+    "prompt_name": "day13-chat"
+  },
+  {
+    "label": "baseline",
+    "feature": "refund",
+    "session_id": "k3-challenge-s03",
+    "correlation_id": "req-1d2b6628",
+    "latency_ms": 151,
+    "trace_id": "860bbc82333cb489bcce7e165c609adb",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/860bbc82333cb489bcce7e165c609adb",
+    "prompt_name": "day13-chat"
+  },
+  {
+    "label": "baseline",
+    "feature": "refund",
+    "session_id": "k3-challenge-s04",
+    "correlation_id": "req-22560072",
+    "latency_ms": 151,
+    "trace_id": "7134ff35dbbe0c66b63323b771b895fc",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/7134ff35dbbe0c66b63323b771b895fc",
+    "prompt_name": "day13-chat"
+  },
+  {
+    "label": "baseline",
+    "feature": "refund",
+    "session_id": "k3-challenge-s05",
+    "correlation_id": "req-91eb5021",
+    "latency_ms": 151,
+    "trace_id": "ffa1896972e3b6e9367c147a2440f3f5",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/ffa1896972e3b6e9367c147a2440f3f5",
+    "prompt_name": "day13-chat"
+  },
+  {
+    "label": "candidate",
+    "feature": "refund",
+    "session_id": "k3-challenge-s01",
+    "correlation_id": "req-65d375c7",
+    "latency_ms": 1024,
+    "trace_id": "618ed2879e900a2f648166a885225cd5",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/618ed2879e900a2f648166a885225cd5",
+    "prompt_name": "day13-chat"
+  },
+  {
+    "label": "candidate",
+    "feature": "refund",
+    "session_id": "k3-challenge-s02",
+    "correlation_id": "req-683a93a7",
+    "latency_ms": 151,
+    "trace_id": "53f2a8b25bdebd2bc3b94d5776165d79",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/53f2a8b25bdebd2bc3b94d5776165d79",
+    "prompt_name": "day13-chat"
+  },
+  {
+    "label": "candidate",
+    "feature": "refund",
+    "session_id": "k3-challenge-s03",
+    "correlation_id": "req-64d17d51",
+    "latency_ms": 150,
+    "trace_id": "0aaad60d9a356aebfee33bb9dc860345",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/0aaad60d9a356aebfee33bb9dc860345",
+    "prompt_name": "day13-chat"
+  },
+  {
+    "label": "candidate",
+    "feature": "refund",
+    "session_id": "k3-challenge-s04",
+    "correlation_id": "req-80a6b1d2",
+    "latency_ms": 151,
+    "trace_id": "fba51bf6fa42bd89f8de13a48f334a35",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/fba51bf6fa42bd89f8de13a48f334a35",
+    "prompt_name": "day13-chat"
+  },
+  {
+    "label": "candidate",
+    "feature": "refund",
+    "session_id": "k3-challenge-s05",
+    "correlation_id": "req-da983403",
+    "latency_ms": 151,
+    "trace_id": "339fedb530a201814f0e62bb701aaa50",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/339fedb530a201814f0e62bb701aaa50",
+    "prompt_name": "day13-chat"
+  }
+]

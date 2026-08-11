@@ -1,0 +1,21 @@
+Challenge: day13-k3-observability-v1
+Scenario: rag_slow
+Feature: refund
+
+Baseline P95: 1063 ms
+Incident P95: 2652 ms
+Threshold: 2000 ms
+
+Slow trace ID: 599082bcff488877d19bb7182a6ade01
+Correlation ID: req-2d1c76d6
+
+Waterfall:
+- run (GENERATION): 2659 ms
+  - rag_retrieval (SPAN): 2507 ms
+
+Conclusion:
+rag_retrieval accounts for about 94% of the trace duration. The injected
+rag_slow incident blocks retrieval for 2.5 seconds and is the root cause of
+the P95 latency breach.
+
+Machine-readable evidence: challenge_trace.json

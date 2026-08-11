@@ -1,0 +1,30 @@
+[
+  {
+    "phase": "production-v2",
+    "production_version": 2,
+    "labels": [
+      "candidate",
+      "production"
+    ],
+    "trace_id": "b6559c26eaecb5633988273e470fc706",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/b6559c26eaecb5633988273e470fc706",
+    "correlation_id": "req-5e0ebf48",
+    "prompt_name": "day13-chat",
+    "prompt_label": "production",
+    "prompt_version": 2
+  },
+  {
+    "phase": "rollback-v1",
+    "production_version": 1,
+    "labels": [
+      "baseline",
+      "production"
+    ],
+    "trace_id": "a0f6d651fba50cfce86478934dd0f185",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/a0f6d651fba50cfce86478934dd0f185",
+    "correlation_id": "req-37d95fa0",
+    "prompt_name": "day13-chat",
+    "prompt_label": "production",
+    "prompt_version": 1
+  }
+]

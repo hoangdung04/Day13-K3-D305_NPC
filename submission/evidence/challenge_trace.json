@@ -1,0 +1,150 @@
+{
+  "challenge_id": "day13-k3-observability-v1",
+  "scenario": "rag_slow",
+  "affected_feature": "refund",
+  "latency_threshold_ms": 2000,
+  "baseline_metrics": {
+    "traffic": 5,
+    "latency_p50": 151.0,
+    "latency_p95": 1063.0,
+    "latency_p99": 1063.0,
+    "avg_cost_usd": 0.0021,
+    "total_cost_usd": 0.0105,
+    "tokens_in_total": 162,
+    "tokens_out_total": 670,
+    "error_breakdown": {},
+    "quality_avg": 0.86
+  },
+  "incident_metrics": {
+    "traffic": 10,
+    "latency_p50": 2651.0,
+    "latency_p95": 2652.0,
+    "latency_p99": 2652.0,
+    "avg_cost_usd": 0.002,
+    "total_cost_usd": 0.02,
+    "tokens_in_total": 324,
+    "tokens_out_total": 1270,
+    "error_breakdown": {},
+    "quality_avg": 0.86
+  },
+  "baseline_requests": [
+    {
+      "correlation_id": "req-2cf5693b",
+      "latency_ms": 152,
+      "elapsed_ms": 3740.7,
+      "session_id": "k3-challenge-s01",
+      "feature": "refund",
+      "trace_id": "212e859fd16815a8a0d0e51da2abf1d8",
+      "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/212e859fd16815a8a0d0e51da2abf1d8"
+    },
+    {
+      "correlation_id": "req-5590b343",
+      "latency_ms": 1063,
+      "elapsed_ms": 3254.6,
+      "session_id": "k3-challenge-s02",
+      "feature": "refund",
+      "trace_id": "c4270c74606b08b1f849488a3073d1ff",
+      "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/c4270c74606b08b1f849488a3073d1ff"
+    },
+    {
+      "correlation_id": "req-da992a54",
+      "latency_ms": 151,
+      "elapsed_ms": 3896.5,
+      "session_id": "k3-challenge-s03",
+      "feature": "refund",
+      "trace_id": "10c0e7e67d80ae18c614eddc461e8100",
+      "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/10c0e7e67d80ae18c614eddc461e8100"
+    },
+    {
+      "correlation_id": "req-87d7164f",
+      "latency_ms": 151,
+      "elapsed_ms": 3896.8,
+      "session_id": "k3-challenge-s04",
+      "feature": "refund",
+      "trace_id": "6f5371d9606b84d8fca4221fce0acb9f",
+      "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/6f5371d9606b84d8fca4221fce0acb9f"
+    },
+    {
+      "correlation_id": "req-724a0d29",
+      "latency_ms": 151,
+      "elapsed_ms": 3896.2,
+      "session_id": "k3-challenge-s05",
+      "feature": "refund",
+      "trace_id": "502b17f473bfc8e7edf4d5572125295a",
+      "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/502b17f473bfc8e7edf4d5572125295a"
+    }
+  ],
+  "incident_requests": [
+    {
+      "correlation_id": "req-2d1c76d6",
+      "latency_ms": 2652,
+      "elapsed_ms": 6238.7,
+      "session_id": "k3-challenge-s01",
+      "feature": "refund",
+      "trace_id": "599082bcff488877d19bb7182a6ade01",
+      "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/599082bcff488877d19bb7182a6ade01"
+    },
+    {
+      "correlation_id": "req-dc0fb1b5",
+      "latency_ms": 2652,
+      "elapsed_ms": 14223.2,
+      "session_id": "k3-challenge-s02",
+      "feature": "refund",
+      "trace_id": "e6b22ad422ec94f48bb9e8adc23283b9",
+      "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/e6b22ad422ec94f48bb9e8adc23283b9"
+    },
+    {
+      "correlation_id": "req-be32a85a",
+      "latency_ms": 2652,
+      "elapsed_ms": 6238.5,
+      "session_id": "k3-challenge-s03",
+      "feature": "refund",
+      "trace_id": "d832d2e6c36b841c18e9abffa022c6bb",
+      "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/d832d2e6c36b841c18e9abffa022c6bb"
+    },
+    {
+      "correlation_id": "req-84284a99",
+      "latency_ms": 2651,
+      "elapsed_ms": 14223.1,
+      "session_id": "k3-challenge-s04",
+      "feature": "refund",
+      "trace_id": "a0b5d0a29350a35131db0337ba3e1c43",
+      "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/a0b5d0a29350a35131db0337ba3e1c43"
+    },
+    {
+      "correlation_id": "req-c112ff80",
+      "latency_ms": 2652,
+      "elapsed_ms": 8901.0,
+      "session_id": "k3-challenge-s05",
+      "feature": "refund",
+      "trace_id": "6e381718912c0174e770c55a8c8b9419",
+      "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/6e381718912c0174e770c55a8c8b9419"
+    }
+  ],
+  "slowest_incident": {
+    "correlation_id": "req-2d1c76d6",
+    "latency_ms": 2652,
+    "elapsed_ms": 6238.7,
+    "session_id": "k3-challenge-s01",
+    "feature": "refund",
+    "trace_id": "599082bcff488877d19bb7182a6ade01",
+    "trace_url_path": "/project/cmso5nh3r03raad0ch1h1vbbd/traces/599082bcff488877d19bb7182a6ade01"
+  },
+  "waterfall": [
+    {
+      "id": "fcfe8080a8e8d48a",
+      "name": "run",
+      "type": "GENERATION",
+      "parent_observation_id": null,
+      "duration_ms": 2659.0
+    },
+    {
+      "id": "fdbecbb68d2c8fc3",
+      "name": "rag_retrieval",
+      "type": "SPAN",
+      "parent_observation_id": "fcfe8080a8e8d48a",
+      "duration_ms": 2507.0
+    }
+  ],
+  "root_cause": "rag_retrieval blocks for 2.5 seconds while rag_slow is enabled"
+}
